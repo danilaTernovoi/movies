@@ -1,0 +1,54 @@
+@font-face {
+  src: url(./assets/fonts/Inter-Regular.ttf);
+  font-family: 'inter-regular';
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+#root {
+  background: #f7f7f7;
+  min-height: 100vh;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: auto 1fr auto;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.ant-menu {
+  background-color: transparent;
+}
+
+.bg {
+  background-color: rgba(0, 0, 255, 0.1);
+  box-shadow: inset 0 0 2px 0 navy;
+}
+
+.blue {
+  box-shadow: inset 0 0 0 2px navy;
+}
+
+.locker {
+  min-height: 80px;
+}
+
+.container {
+  width: 95vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+#modal {
+  position: fixed;
+  top: 20px;
+  left: 75px;
+  z-index: 10;
+  display: flex;
+}

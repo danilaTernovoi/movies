@@ -1,0 +1,136 @@
+:root {
+  --poster-height: 281px;
+  --gutter-small: 8px;
+  --gutter-large: 20px;
+  --rating-output-size: 30px;
+}
+
+/* Card layout */
+.movie {
+  display: flex;
+  column-gap: var(--gutter-large);
+  height: var(--poster-height);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Text content */
+.movie__textContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gutter-small);
+  padding: var(--gutter-small);
+  box-sizing: border-box;
+}
+
+/* Header */
+.movie__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--gutter-small);
+}
+
+/* Title */
+.movie__title {
+  margin: 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 300px;
+}
+
+/* Rating output */
+.movie__ratingOutput {
+  width: var(--rating-output-size);
+  height: var(--rating-output-size);
+  border-width: 2px;
+  box-sizing: border-box;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Poster */
+.movie__poster {
+  height: 100%;
+  display: block;
+  max-width: 281px;
+}
+
+/* Genres */
+.movie__genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter-small);
+
+  /* typography */
+  font-family: inter-regular;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* Genre item */
+.movie__genre {
+  background: #fafafa;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 3px;
+}
+
+/* Rating */
+.movie__rating {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .movie {
+    display: block;
+    padding: 6px 13px;
+    position: relative;
+  }
+
+  .movie__header {
+    align-items: flex-start;
+  }
+
+  .movie__title {
+    font-size: 20px;
+  }
+
+  .movie__poster {
+    float: left;
+    width: 60px;
+    height: 91px;
+    margin-right: 13px;
+  }
+
+  .movie__textContent {
+    padding: 0;
+    display: block;
+  }
+
+  .movie__overview {
+    clear: both;
+    margin-top: 20px;
+    width: 90%;
+  }
+
+  .movie__rating {
+    text-align: right;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+  }
+
+  .movie__release,
+  .movie__genres {
+    margin-top: 2px;
+  }
+}

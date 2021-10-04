@@ -1,0 +1,13 @@
+.movieList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .movieList {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 0;
+  }
+}
