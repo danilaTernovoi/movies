@@ -83,22 +83,28 @@ const MovieCard = ({ movie }) => {
 
   return (
     <div className="movie">
+      {/* Постер */}
       <img
         className="movie__poster"
         src={posterPath}
         alt={title}
       />
-
+      {/* Основной контент */}
       <div className="movie__textContent">
+        {/* Шапка основного контента */}
         <header className="movie__header">
+          {/* Название фильма */}
           <h1 className="movie__title">{title}</h1>
+          {/* Оценка в углу */}
           <div className="movie__ratingOutput" style={{
             border: `2px solid ${getRateColor(localRating)}`
           }}>
             {localRating}
           </div>
         </header>
+        {/* Дата выхода */}
         <div className="movie__release">{releaseDate}</div>
+        {/* Жанры */}
         <div className="movie__genres">
           {
             genres
@@ -106,9 +112,11 @@ const MovieCard = ({ movie }) => {
               .map(({ name }) => (<div className="movie__genre" key={name}>{name}</div>))
           }
         </div>
+        {/* Обзор на фильм */}
         <p className="movie__overview">
           {trunc(overview, 30)}
         </p>
+        {/* Оценка (звёзды) */}
         <div className="movie__rating">
           <Rate
             count={10}

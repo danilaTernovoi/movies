@@ -5,7 +5,10 @@ const mixPostBody = (data, method = 'post') => ({
 });
 
 const prepareParams = (dataObj) =>
-  Object.entries(dataObj).reduce((total, [key, value]) => (total += `&${key}=${value}`), '');
+  Object.entries(dataObj).reduce((total, [key, value]) => {
+    const res = `${total}&${key}=${value}`;
+    return res;
+  }, '');
 
 class MovieService {
   apiKey = '92833f8c8276d48797d54caa06e86881';

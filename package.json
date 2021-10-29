@@ -163,22 +163,5 @@
       "jest-watch-typeahead/testname"
     ],
     "resetMocks": true
-  },
-  "babel": {
-    "presets": [
-      "react-app",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      [
-        "module-resolver",
-        {
-          "alias": {
-            "@": "./src",
-            "comps": "./src/components"
-          }
-        }
-      ]
-    ]
   }
 }

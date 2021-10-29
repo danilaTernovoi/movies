@@ -1,0 +1,10 @@
+.noMovies {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: inter-regular;
+  font-size: 4rem;
+  font-variant: small-caps;
+}

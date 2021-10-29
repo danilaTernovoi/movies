@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useReducer, useState } from 'react';
 import { Spin } from 'antd';
+
 import Nav from 'comps/Nav';
 import SearchInput from 'comps/SearchInput';
 import MovieList from 'comps/MovieList';
@@ -46,6 +47,7 @@ const App = () => {
     init();
   }, []);
 
+
   // состояние модалки (показать, сообщение модалки)
   const [alert, setAlert] = useState({
     showed: false,
@@ -79,7 +81,7 @@ const App = () => {
     updateRated,
     openTab,
     showAlert,
-    FAIL_FETCH_MESSAGE
+    FAIL_FETCH_MESSAGE,
   };
 
   return (
@@ -91,7 +93,7 @@ const App = () => {
           <Nav />
           <SearchInput />
           <MovieList />
-          <Pagination />
+          {state.search.results.length > 1 && <Pagination />}
         </>}
       {/* загрузчик */}
       {startLoadingSuccess ||
