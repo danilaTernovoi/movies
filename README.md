@@ -1,4 +1,1 @@
-# movies
-https://movies-inky-seven.vercel.app/
-есть проблемы с вёрсткой, по позже исправлю
-у апишки фильмов я заметил косяк c оценкой фильмов по гостевой сессии
+https://movies-beryl.vercel.app/
